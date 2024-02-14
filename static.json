@@ -1,0 +1,22 @@
+{
+  "_static": {
+    "application": "git@github.com:from-static-labs/static-search.git",
+    "version": "0.1.0"
+  },
+  "metadata": {
+    "title": "Search | Globus",
+    "description": "This is an example of a basis Globus Search interface generated from a static.json file."
+  },
+  "contents": {
+    "logo": {
+      "src": "https://www.usgs.gov/themes/custom/usgs_tantalum/usgs_logo.png",
+      "alt": "USGS – science for a changing world"
+    },
+    "headline": "ScienceBase Data Releases",
+    "globus": {
+      "search": {
+        "index": "6d222eba-980f-410c-9a58-52a785d660ea"
+      }
+    }
+  }
+}
