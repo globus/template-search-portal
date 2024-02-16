@@ -21,4 +21,4 @@ concurrency:
 
 jobs:
   static:
-    uses: from-static-labs/actions/.github/workflows/static.yml@main
+    uses: from-static/actions/.github/workflows/static.yml@main
