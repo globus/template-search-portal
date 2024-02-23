@@ -1,7 +1,6 @@
 {
   "_static": {
-    "application": "git@github.com:from-static-labs/static-search.git",
-    "version": "0.1.0"
+    "generator": "from-static-labs/static-search",
   },
   "metadata": {
     "title": "Search | Globus",
