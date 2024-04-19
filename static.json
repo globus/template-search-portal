@@ -1,25 +1,68 @@
 {
   "_static": {
-    "generator": "from-static-labs/static-search"
+    "generator": {
+      "name": "@globus/static-search-portal"
+    }
   },
-  "metadata": {
-    "title": "Search | Globus",
-    "description": "This is an example of a basis Globus Search interface generated from a static.json file."
-  },
-  "contents": {
-    "logo": {
-      "src": "https://www.usgs.gov/themes/custom/usgs_tantalum/usgs_logo.png",
-      "alt": "USGS – science for a changing world"
-    },
-    "headline": "ScienceBase Data Releases",
-    "globus": {
-      "search": {
-        "index": "6d222eba-980f-410c-9a58-52a785d660ea"
+  "data": {
+    "version": "1.0.0",
+    "attributes": {
+      "metadata": {
+        "title": "Search | Globus",
+        "description": "This is an example of a basis Globus Search interface generated from a static.json file."
+      },
+      "content": {
+        "logo": {
+          "src": "https://www.usgs.gov/themes/custom/usgs_tantalum/usgs_logo.png",
+          "alt": "USGS – science for a changing world"
+        },
+        "headline": "ScienceBase Data Releases"
+      },
+      "components": {
+        "Result": {
+          "heading": "entries[0].content.title",
+          "summary": "entries[0].content.summary",
+          "fields": [
+            {
+              "label": "Purpose",
+              "property": "entries[0].content.purpose"
+            },
+            {
+              "label": "Material Request Instructions",
+              "property": "entries[0].content.materialRequestInstructions"
+            },
+            {
+              "label": "Tags",
+              "property": "entries[0].content.tags"
+            }
+          ]
+        }
+      },
+      "globus": {
+        "search": {
+          "index": "6d222eba-980f-410c-9a58-52a785d660ea",
+          "facets": [
+            {
+              "name": "Tags",
+              "field_name": "tags.name",
+              "type": "terms",
+              "size": 10
+            },
+            {
+              "name": "Categories",
+              "field_name": "browseCategories",
+              "type": "terms",
+              "size": 10
+            },
+            {
+              "name": "System Types",
+              "field_name": "systemTypes",
+              "type": "terms",
+              "size": 10
+            }
+          ]
+        }
       }
-    },
-    "result": {
-      "title": "entries[0].content.title",
-      "summary": "entries[0].content.summary"
     }
   }
 }
