@@ -43,7 +43,7 @@ If your Globus Search Index is private, you'll want to include authentication to
    * `data.attributes.globus.application.client_id` – The UUID of the client created in **the previous step**.
 
 #### Common Changes after Creating Your Portal
-– **Result + Result Listing Rendering** – Update the `data.attributes.components.Result` and `data.attributes.components.ResultListing` to reference specific properties on your indexed data.
+- **Result + Result Listing Rendering** – Update the `data.attributes.components.Result` and `data.attributes.components.ResultListing` to reference specific properties on your indexed data.
 - **Edit/Remove the `CITATION` file** – Update the [`CITATION.cff`](CITATION.cff) file to reflect the appropriate citation information for your research data portal – [learn more about `CITATION` files](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files).
 - **Removing this section of the README** – Remove this section from the `README.md` file or update the README to meet your needs.
 
@@ -72,8 +72,10 @@ The type used for `data` by the [@globus/static-search-portal generator](https:/
 
 #### Type declaration
 
+See: https://github.com/globus/static-search-portal/blob/main/docs/modules.md#data
 
-#### Supported Fields
+
+#### Field Types
 
 #### Advanced Customization
 
