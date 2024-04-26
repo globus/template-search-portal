@@ -8,55 +8,129 @@
     "version": "1.0.0",
     "attributes": {
       "metadata": {
-        "title": "Search | Globus",
-        "description": "This is an example of a basis Globus Search interface generated from a static.json file."
+        "title": "Search | RPL@APS",
+        "description": "This is the RPL project. Raf should fill in some details here!"
+      },
+      "features": {
+        "jsonata": true
+      },
+      "theme": {
+        "colors": {
+          "brand": {
+            "50": "#edeaff",
+            "100": "#c8c3f1",
+            "200": "#a39be4",
+            "300": "#7f73d8",
+            "400": "#5b4bcc",
+            "500": "#4232b2",
+            "600": "#32268b",
+            "700": "#241b64",
+            "800": "#15103e",
+            "900": "#070419"
+          }
+        }
       },
       "content": {
-        "logo": {
-          "src": "https://www.usgs.gov/themes/custom/usgs_tantalum/usgs_logo.png",
-          "alt": "USGS – science for a changing world"
-        },
-        "headline": "ScienceBase Data Releases"
+        "headline": "RPL@APS"
       },
       "components": {
-        "Result": {
-          "heading": "entries[0].content.title",
-          "summary": "entries[0].content.summary",
+        "Footer": {
+          "partners": [
+            {
+              "name": "Argonne National Laboratory",
+              "href": "https://www.anl.gov"
+            },
+            {
+              "name": "Globus",
+              "href": "https://www.globus.org"
+            }
+          ],
+          "disclaimer": "This site relies on ACDC, a resource of the Argonne Leadership Computing Facility, which is a DOE Office of Science User Facility supported under Contract DE-AC02-06CH11357."
+        },
+        "ResultListing": {
           "fields": [
             {
-              "label": "Purpose",
-              "property": "entries[0].content.purpose"
+              "label": "Target Color",
+              "property": "entries[0].content.project_metadata.target_color",
+              "type": "rgba"
             },
             {
-              "label": "Material Request Instructions",
-              "property": "entries[0].content.materialRequestInstructions"
+              "label": "Time to Best",
+              "property": "entries[0].content.project_metadata.time_to_best"
             },
             {
-              "label": "Tags",
-              "property": "entries[0].content.tags"
+              "label": "Best Color",
+              "property": "entries[0].content.project_metadata.best_so_far",
+              "type": "rgba"
+            },
+            {
+              "label": "Total Time",
+              "property": "entries[0].content.project_metadata.total_time"
+            }
+          ]
+        },
+        "Result": {
+          "heading": "entries[0].content.project_metadata.experiment",
+          "summary": "entries[0].content.subtitle",
+          "fields": [
+            {
+              "label": "Target Color",
+              "property": "entries[0].content.project_metadata.target_color",
+              "type": "rgba"
+            },
+            {
+              "label": "Best Color",
+              "property": "entries[0].content.project_metadata.best_so_far",
+              "type": "rgba"
+            },
+            {
+              "label": "Time to Best",
+              "property": "entries[0].content.project_metadata.time_to_best"
+            },
+            {
+              "label": "Total Time",
+              "property": "entries[0].content.project_metadata.total_time"
+            },
+            {
+              "label": "Convergence Graph",
+              "property": "$replace(entries[0].content.files[filename='convergence_graph.png'].url, 'https://bb8d048a-2cad-4029-a9c7-671ec5d1f84d.e.globus.org', 'https://g-cd34a.fd635.8443.data.globus.org')",
+              "type": "image"
+            },
+            {
+              "label": "Plate 1",
+              "property": "$replace(entries[0].content.files[filename='plate_1.jpg'].url, 'https://bb8d048a-2cad-4029-a9c7-671ec5d1f84d.e.globus.org', 'https://g-cd34a.fd635.8443.data.globus.org')",
+              "type": "image"
+            },
+            {
+              "label": "Plate 2",
+              "property": "$replace(entries[0].content.files[filename='plate_2.jpg'].url, 'https://bb8d048a-2cad-4029-a9c7-671ec5d1f84d.e.globus.org', 'https://g-cd34a.fd635.8443.data.globus.org')",
+              "type": "image"
+            },
+            {
+              "label": "Solver",
+              "property": "entries[0].content.project_metadata.solver"
+            },
+            {
+              "label": "Workflow Steps",
+              "property": "entries[0].content.project_metadata.wf_steps"
+            },
+            {
+              "label": "Runs",
+              "property": "entries[0].content.project_metadata.runs"
             }
           ]
         }
       },
       "globus": {
+        "application": {
+          "client_id": "7b29cd62-7df9-4d21-9d9c-29b2768355a4"
+        },
         "search": {
-          "index": "6d222eba-980f-410c-9a58-52a785d660ea",
+          "index": "aefcecc6-e554-4f8c-a25b-147f23091944",
           "facets": [
             {
-              "name": "Tags",
-              "field_name": "tags.name",
-              "type": "terms",
-              "size": 10
-            },
-            {
-              "name": "Categories",
-              "field_name": "browseCategories",
-              "type": "terms",
-              "size": 10
-            },
-            {
-              "name": "System Types",
-              "field_name": "systemTypes",
+              "name": "Creator",
+              "field_name": "dc.creators.creatorName",
               "type": "terms",
               "size": 10
             }
