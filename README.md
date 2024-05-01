@@ -1,4 +1,4 @@
-# 🧪 Beta 🧪
+# 🧪 BETA 🧪
 
 **This is template repository used to generate a static Globus-powered research search portal.**
 
