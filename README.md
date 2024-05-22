@@ -2,8 +2,6 @@
 
 **This is template repository used to generate a static Globus-powered research search portal.**
 
-**We're looking forward to sharing more details about this repository and more at [GlobusWorld 2024](https://www.globusworld.org/)!**
-
 ----
 
 <img src="https://github.com/globus/template-data-portal/assets/694253/29723bc0-d692-47d5-bdc3-2625d3712cf3" height="200px" alt="Globus + static" />
@@ -33,9 +31,10 @@ While this repository is a working example of a search portal, it is also a temp
 If your Globus Search Index is private, you'll want to include authentication to your portal.
 
 1. Register an application on Globus – https://app.globus.org/settings/developers
-   * You'll be creating an OAuth public client.
-   * Update the **Redirects** to include your GitHub Pages URL + `/authenticate`, i.e., `https://globus.github.io/template-search-portal/authenticate`.
-   * Optional: Specify the **Privacy Policy URL** and **Terms & Conditions URL** to the portal-provided routes, i.e. `https://globus.github.io/template-search-portal/privacy-policy`
+   * You'll be creating an OAuth public client; This option is presented as _"Register a thick client or script that will be installed and run by users on their devices"_.
+   * Update the **Redirects** to include your GitHub Pages URL + `/authenticate`, i.e., `https://globus.github.io/template-data-portal/authenticate`, `https://{username}.github.io/{repository}/authenticate`
+     * If you have [configured your GitHub Pages to use a custom domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site), this will be `https://{domain}/authenticate`
+     * It is important to note that Globus Auth **requires HTTPS**.
 1. Update the `static.json` to include:
    * `data.attributes.globus.application.client_id` – The UUID of the client created in **the previous step**.
 
@@ -61,7 +60,7 @@ If your Globus Search Index is private, you'll want to include authentication to
 - 🚀 **Automated Deployments via GitHub Actions** – Any file changes will result in the deployment (and rebuild) of your data portal.
    - You can manually trigger a deployment by navigating to the **Actions** tab and selecting the **static** workflow.
    
-- 🤖 **Dependabot** – A default [Dependabot](https://docs.github.com/en/code-security/dependabot) configuration ([`.github/dependabot.yml`](.github/dependabot.yml)) to keep your repository up-to-date with latest changes to [globus/static-data-portal](https://github.com/globus/static-data-portal).
+- 🤖 **Dependabot** – A default [Dependabot](https://docs.github.com/en/code-security/dependabot) configuration ([`.github/dependabot.yml`](.github/dependabot.yml)) to keep your repository up-to-date with latest changes to [globus/static-search-portal](https://github.com/globus/static-search-portal).
 
 ### `static.json`
 
