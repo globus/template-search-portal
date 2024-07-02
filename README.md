@@ -1,12 +1,13 @@
-# 🧪 BETA 🧪
-
-**This is template repository used to generate a static Globus-powered research search portal.**
+<p align="center">
+  <img src="https://github.com/globus/template-data-portal/assets/694253/8c55d1e3-1ecd-47ea-8288-73c79cd2c953" height="100px" alt="Globus" />
+   <br/>
+  <strong>🧪 BETA 🧪</strong>
+  <br/>
+  <strong>This is template repository used to generate a static Globus-powered research search portal.</strong>
+  <br/>
+</p>
 
 ----
-
-<img src="https://github.com/globus/template-data-portal/assets/694253/29723bc0-d692-47d5-bdc3-2625d3712cf3" height="200px" alt="Globus + static" />
-
-This is a static research search portal powered by Globus.
 
 View the result at: [globus.github.io/template-search-portal](https://globus.github.io/template-search-portal).
 
