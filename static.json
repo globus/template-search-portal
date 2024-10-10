@@ -8,129 +8,45 @@
     "version": "1.0.0",
     "attributes": {
       "metadata": {
-        "title": "Search | RPL@APS",
-        "description": "This is the RPL project. Raf should fill in some details here!"
-      },
-      "features": {
-        "jsonata": true
-      },
-      "theme": {
-        "colors": {
-          "brand": {
-            "50": "#edeaff",
-            "100": "#c8c3f1",
-            "200": "#a39be4",
-            "300": "#7f73d8",
-            "400": "#5b4bcc",
-            "500": "#4232b2",
-            "600": "#32268b",
-            "700": "#241b64",
-            "800": "#15103e",
-            "900": "#070419"
-          }
-        }
+        "title": "Search | Globus Search Portal"
       },
       "content": {
-        "headline": "RPL@APS"
+        "headline": "Globus Search Portal"
+      },
+      "features": {
+        "transfer": true
       },
       "components": {
-        "Footer": {
-          "partners": [
-            {
-              "name": "Argonne National Laboratory",
-              "href": "https://www.anl.gov"
-            },
-            {
-              "name": "Globus",
-              "href": "https://www.globus.org"
-            }
-          ],
-          "disclaimer": "This site relies on ACDC, a resource of the Argonne Leadership Computing Facility, which is a DOE Office of Science User Facility supported under Contract DE-AC02-06CH11357."
-        },
-        "ResultListing": {
-          "fields": [
-            {
-              "label": "Target Color",
-              "property": "entries[0].content.project_metadata.target_color",
-              "type": "rgba"
-            },
-            {
-              "label": "Time to Best",
-              "property": "entries[0].content.project_metadata.time_to_best"
-            },
-            {
-              "label": "Best Color",
-              "property": "entries[0].content.project_metadata.best_so_far",
-              "type": "rgba"
-            },
-            {
-              "label": "Total Time",
-              "property": "entries[0].content.project_metadata.total_time"
-            }
-          ]
-        },
         "Result": {
-          "heading": "entries[0].content.project_metadata.experiment",
-          "summary": "entries[0].content.subtitle",
+          "heading": "entries[0].content.name",
           "fields": [
             {
-              "label": "Target Color",
-              "property": "entries[0].content.project_metadata.target_color",
-              "type": "rgba"
+              "label": "Tags",
+              "property": "entries[0].content.tags"
             },
             {
-              "label": "Best Color",
-              "property": "entries[0].content.project_metadata.best_so_far",
-              "type": "rgba"
-            },
-            {
-              "label": "Time to Best",
-              "property": "entries[0].content.project_metadata.time_to_best"
-            },
-            {
-              "label": "Total Time",
-              "property": "entries[0].content.project_metadata.total_time"
-            },
-            {
-              "label": "Convergence Graph",
-              "property": "$replace(entries[0].content.files[filename='convergence_graph.png'].url, 'https://bb8d048a-2cad-4029-a9c7-671ec5d1f84d.e.globus.org', 'https://g-cd34a.fd635.8443.data.globus.org')",
-              "type": "image"
-            },
-            {
-              "label": "Plate 1",
-              "property": "$replace(entries[0].content.files[filename='plate_1.jpg'].url, 'https://bb8d048a-2cad-4029-a9c7-671ec5d1f84d.e.globus.org', 'https://g-cd34a.fd635.8443.data.globus.org')",
-              "type": "image"
-            },
-            {
-              "label": "Plate 2",
-              "property": "$replace(entries[0].content.files[filename='plate_2.jpg'].url, 'https://bb8d048a-2cad-4029-a9c7-671ec5d1f84d.e.globus.org', 'https://g-cd34a.fd635.8443.data.globus.org')",
-              "type": "image"
-            },
-            {
-              "label": "Solver",
-              "property": "entries[0].content.project_metadata.solver"
-            },
-            {
-              "label": "Workflow Steps",
-              "property": "entries[0].content.project_metadata.wf_steps"
-            },
-            {
-              "label": "Runs",
-              "property": "entries[0].content.project_metadata.runs"
+              "label": "Region",
+              "property": "entries[0].content.region"
             }
           ]
         }
       },
       "globus": {
         "application": {
-          "client_id": "7b29cd62-7df9-4d21-9d9c-29b2768355a4"
+          "client_id": "d33fbe98-749b-4b4c-b91b-b31e469de04e"
         },
         "search": {
-          "index": "aefcecc6-e554-4f8c-a25b-147f23091944",
+          "index": "78b92aca-e361-4307-8f66-bc448f20e2c3",
           "facets": [
             {
-              "name": "Creator",
-              "field_name": "dc.creators.creatorName",
+              "name": "Tags",
+              "field_name": "tags",
+              "type": "terms",
+              "size": 10
+            },
+            {
+              "name": "Region",
+              "field_name": "region",
               "type": "terms",
               "size": 10
             }
