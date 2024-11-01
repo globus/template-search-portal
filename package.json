@@ -1,5 +1,5 @@
 {
     "dependencies": {
-        "@globus/static-search-portal": "0.12.0"
+        "@globus/static-search-portal": "1.0.0"
     }
 }
