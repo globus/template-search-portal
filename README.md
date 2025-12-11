@@ -36,7 +36,7 @@ While this repository is a working example of a search portal, it is also a temp
 # Examples
 Example implementations of the Search Portal showing various capabilities – reviewing (and even copying) the `static.json` files can be a great starting point for your own portal.
 
-- [@globus/example-search-portal-with-embeds](globus/example-search-portal-with-embeds)
+- [@globus/example-search-portal-with-embeds](https://github.com/globus/example-search-portal-with-embeds)
 - [@globus/example-search-portal-with-transfer](https://github.com/globus/example-search-portal-with-transfer)
 - [@globus/example-search-portal-with-github-action-ingest](https://github.com/globus/example-search-portal-with-github-action-ingest)
 
