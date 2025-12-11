@@ -3,7 +3,7 @@
    <br/>
   <strong>🧪 BETA 🧪</strong>
   <br/>
-  <strong>This is template repository used to generate a static Globus-powered research search portal.</strong>
+  <strong>This is template repository used to generate a serverless Globus-powered research search portal.</strong>
   <br/>
 </p>
 
@@ -11,7 +11,7 @@
 
 View the result at: [globus.github.io/template-search-portal](https://globus.github.io/template-search-portal).
 
-While this repository is a working example of a search portal, it is also a template for [creating your own static research search portal](#creating-your-own-static-research-search-portal).
+While this repository is a working example of a search portal, it is also a template for [creating your own research search portal](#creating-your-own-static-research-search-portal).
 
 ----
 
@@ -33,7 +33,14 @@ While this repository is a working example of a search portal, it is also a temp
    
 - 🤖 **Dependabot** – A default [Dependabot](https://docs.github.com/en/code-security/dependabot) configuration ([`.github/dependabot.yml`](.github/dependabot.yml)) to keep your repository up-to-date with latest changes to [globus/static-search-portal](https://github.com/globus/static-search-portal).
 
-### Creating Your Own Static Research Search Portal
+# Examples
+Example implementations of the Search Portal showing various capabilities – reviewing (and even copying) the `static.json` files can be a great starting point for your own portal.
+
+- [@globus/example-search-portal-with-embeds](globus/example-search-portal-with-embeds)
+- [@globus/example-search-portal-with-transfer](https://github.com/globus/example-search-portal-with-transfer)
+- [@globus/example-search-portal-with-github-action-ingest](https://github.com/globus/example-search-portal-with-github-action-ingest)
+
+# Creating Your Own Static Research Search Portal
 
 1. Create a new repository from the [globus/template-search-portal](https://github.com/globus/template-search-portal) template.
    * Using the following URL: https://github.com/new?template_name=template-search-portal&template_owner=globus
@@ -72,8 +79,7 @@ The type used for `data` by the [@globus/static-search-portal generator](https:/
 
 #### Type declaration
 
-See: https://github.com/globus/static-search-portal/blob/main/docs/modules.md#data
-
+See: https://github.com/globus/static-search-portal/blob/main/docs/type-aliases/Static.md
 
 #### Field Types
 
