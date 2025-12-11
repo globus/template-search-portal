@@ -3,7 +3,7 @@
    <br/>
   <strong>🧪 BETA 🧪</strong>
   <br/>
-  <strong>This is template repository used to generate a serverless Globus-powered research search portal.</strong>
+  <strong>This is a template repository used to generate a serverless Globus-powered research search portal.</strong>
   <br/>
 </p>
 
